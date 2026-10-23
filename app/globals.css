@@ -129,13 +129,20 @@ body {
   display: flex;
   gap: 16px;
   margin-top: 24px;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 .btn-primary,
 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 28px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .btn-primary {
