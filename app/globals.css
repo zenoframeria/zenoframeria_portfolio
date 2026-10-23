@@ -238,12 +238,34 @@ body {
   font-size: 14px;
 }
 
-/*ICONS ชั่วคราวฮะที่template*/
-.details i {
-  width: 20px;
-  text-align: center;
-  margin-right: 8px;
+.timeline {
+  position: relative;
+  max-width: 800px;
+  padding-left: 32px;
+  border-left: 2px solid var(--text-color);
 }
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-color);
+}
+.timeline-period {
+  min-width: 80px;
+  font-weight: 600;
+}
+.timeline-body h3 { margin: 0 0 8px; }
+.timeline-body p { line-height: 1.7; margin-bottom: 12px; }
 
 /* PAGE LAYOUT */
 .container { display: flex; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 20px; }

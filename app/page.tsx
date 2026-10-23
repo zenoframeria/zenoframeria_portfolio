@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import FeaturedProject from "@/components/FeaturedProject";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
 
         <section className="about" id="about">
           <div className="about-photo">
-            <img src="https://media.discordapp.net/attachments/1426420966111707188/1562800598225518622/RUN_1935.jpg?ex=6adb4efa&is=6ad9fd7a&hm=3791f6e71f31108f80f5515b951b9b91b6cf7768dd32189c7f6c7117660fa3b8&=&format=webp" alt="Frame"/>
+            <img src="/frame-img-1.jpg" alt="Frame"/>
           </div>
           <div className="about-text">
             <h2>About Me</h2>
@@ -64,6 +65,24 @@ export default function Home() {
               tech={["Web App", "Gamification", "next.js"]}
               reverse
             />
+          </div>
+        </section>
+
+        <section className="section section-alt" id="experience">
+          <h2>Experience</h2>
+          <div className="timeline">
+            <Experience
+              period="2026"
+              title="Web Developer"
+              description="Developed and maintained responsive websites using modern technologies."
+              tags={["JavaScript", "React", "Node.js"]}
+            />
+            <Experience
+              period="2025"
+              title="AI Research Intern"
+              description="Assisted in research and development of AI models for various applications."
+              tags={["Python", "Machine Learning", "TensorFlow"]}
+            />     
           </div>
         </section>
       </main>
