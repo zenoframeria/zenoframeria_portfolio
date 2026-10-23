@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import FeaturedProject from "@/components/FeaturedProject";
 import Experience from "@/components/Experience";
+import SkillTags from "@/components/SkillTags";
 
 export default function Home() {
   return (
@@ -34,15 +35,18 @@ export default function Home() {
         </section>
 
         <section className="about" id="about">
-          <div className="about-photo">
-            <img src="/frame-img-1.jpg" alt="Frame"/>
+          <div className="about-main">
+            <div className="about-photo">
+              <img src="/frame-img-1.jpg" alt="Frame"/>
+            </div>
+            <div className="about-text">
+              <h2>About Me</h2>
+              <p className="about-intro">Hi, I’m a high school student fascinated by modern physics and quantum technology, while actively exploring web development, AI, and cybersecurity.</p>
+              <p>paragraph about myself</p>
+              <p>paragraph about goals</p>
+            </div>
           </div>
-          <div className="about-text">
-            <h2>About Me</h2>
-            <p className="about-intro">Hi, I’m a high school student fascinated by modern physics and quantum technology, while actively exploring web development, AI, and cybersecurity.</p>
-            <p>paragraph about myself</p>
-            <p>paragraph about goals</p>
-          </div>
+          <SkillTags />
         </section>
 
         <section className="section" id="projects">
