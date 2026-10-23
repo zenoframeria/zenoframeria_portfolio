@@ -109,11 +109,7 @@ body {
   flex: 1;
   max-width: 800px;
 }
-.hero-text h1 {
-  font-size: 72px;
-  white-space: nowrap;
-}
-.hero-text h1 { font-size: clamp(48px, 5vw, 88px); }
+.hero-text h1 { font-size: clamp(32px, 5vw, 88px); }
 .hero-text p  { font-size: clamp(16px, 1.4vw, 24px); }
 
 .hero-image img {
@@ -264,14 +260,12 @@ hr { border: none; border-top: 1px solid #d0d7de; }
 li { margin-bottom: 10px; }
 .project-card { padding: 16px; border: 1px solid #d0d7de; border-radius: 8px; }
 
-/* MOBILE */
+/* MOBILE (≤ 768px) */
 @media (max-width: 768px) {
   .container { flex-direction: column; }
   .profile { width: 100%; }
   .avatar { max-width: 180px; }
-}
-/* MOBILE (≤ 768px) */
-@media (max-width: 768px) {
+  
   .nav-inner { padding: 16px 20px; }   /* ลดระยะขอบ navbar */
 
   .hero,
@@ -288,4 +282,5 @@ li { margin-bottom: 10px; }
   .hero-text { max-width: 100%; }
   .hero-image img,
   .about-photo img { width: 100%; }    /* รูปเต็มความกว้างจอ */
+  .hero-text h1 { font-size: clamp(32px, 9vw, 56px); }  
 }
