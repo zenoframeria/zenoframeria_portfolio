@@ -39,8 +39,8 @@ body {
 .avatar {
   width: 100%;
   max-width: 300px;
-  height: auto;           /* เลิกล็อก 300px */
-  aspect-ratio: 1 / 1;    /* สี่เหลี่ยมจัตุรัส = วงกลมสมบูรณ์ */
+  height: auto;           
+  aspect-ratio: 1 / 1;    
   object-fit: cover;
   border-radius: 50%;
 }
@@ -198,16 +198,6 @@ body {
   gap: 80px;
   padding: 100px 170px 76px;          
   background: var(--navbar-bg);
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-}
-
-.about-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
 }
 
 .about-photo img {
@@ -317,29 +307,54 @@ body {
   margin-top: 0;
 }
 
+/* SKILL SECTION*/
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.skill-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 28px 16px;
+  text-align: center;
+}
+.skill-card i { font-size: 40px; margin-bottom: 12px; }
+.skill-card h3 { margin: 0 0 4px; font-size: 18px; }
+.skill-card p { margin: 0 0 14px; font-size: 13px; opacity: 0.6; }
+.skill-dots { display: flex; justify-content: center; gap: 4px; }
+.dot {
+  width: 100%;
+  max-width: 22px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.12);
+}
+.dot.on { background: #8b5cf6; }
+
 /* MOBILE (≤ 768px) */
 @media (max-width: 768px) {
   .container { flex-direction: column; }
   .profile { width: 100%; }
   .avatar { max-width: 180px; }
   
-  .nav-inner { padding: 16px 20px; }   /* ลดระยะขอบ navbar */
+  .nav-inner { padding: 16px 20px; }  
 
   .hero,
   .section,
-  .about { padding: 48px 20px; }       /* ลดระยะขอบซ้ายขวาทุก section */
+  .about { padding: 48px 20px; }       
 
   .hero,
   .about,
-  .about-main,
   .project-grid {
-    flex-direction: column;            /* เรียงบนลงล่างแทนซ้ายขวา */
+    flex-direction: column;            
     gap: 32px;
   }
 
   .hero-text { max-width: 100%; }
   .hero-image img,
-  .about-photo img { width: 100%; }    /* รูปเต็มความกว้างจอ */
+  .about-photo img { width: 100%; }    
   .hero-text h1 { font-size: clamp(32px, 9vw, 56px); }  
 
   .site-footer {
@@ -358,4 +373,6 @@ body {
   .timeline-item::before,
   .timeline-item:nth-child(even)::before { left: 0; right: auto; }
   .timeline-item .project-tags { justify-content: flex-start; }
+
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
 }

@@ -36,17 +36,19 @@ export default function Home() {
         </section>
 
         <section className="about" id="about">
-          <div className="about-main">
-            <div className="about-photo">
-              <img src="/frame-img-1.jpg" alt="Frame"/>
-            </div>
-            <div className="about-text">
-              <h2>About Me</h2>
-              <p className="about-intro">Hi, I’m a high school student fascinated by modern physics and quantum technology, while actively exploring web development, AI, and cybersecurity.</p>
-              <p>paragraph about myself</p>
-              <p>paragraph about goals</p>
-            </div>
+          <div className="about-photo">
+            <img src="/frame-img-1.jpg" alt="Frame"/>
           </div>
+          <div className="about-text">
+            <h2>About Me</h2>
+            <p className="about-intro">Hi, I’m a high school student fascinated by modern physics and quantum technology, while actively exploring web development, AI, and cybersecurity.</p>
+            <p>paragraph about myself</p>
+            <p>paragraph about goals</p>
+          </div>
+        </section>
+
+        <section className="section" id="skills">
+          <h2>Skills</h2>
           <SkillTags />
         </section>
 
