@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/* ใส่ CSS ของคุณเองต่อจากบรรทัดนี้ได้ */
+html {
+  scroll-behavior: smooth;
+}
+/* GENERAL */
+:root {
+  --bg-color: #f6f1fb;
+  --text-color: #24292f;
+  --navbar-bg: #ece3f7;
+  --logo-color: #042142;
+  --box-shadow: 0 4px 20px #733E8526;
+  --btn-bg: #042142;
+  --btn-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #042142;
+  --text-color: #e8e4f0;
+  --navbar-bg: #153C6A;
+  --logo-color: #eae6f0;
+  --box-shadow: 0 4px 20px #733E8566;
+  --btn-bg: #eae6f0;
+  --btn-text: #042142;
+}
+
+* {
+  font-family: "Pixelify Sans", sans-serif;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* AVATAR */
+.avatar {
+  width: 100%;
+  max-width: 300px;
+  height: auto;           /* เลิกล็อก 300px */
+  aspect-ratio: 1 / 1;    /* สี่เหลี่ยมจัตุรัส = วงกลมสมบูรณ์ */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* NAVBAR */
+body {
+  margin: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--navbar-bg);
+  z-index: 100;
+  box-shadow: var(--box-shadow);
+}
+
+.nav-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 16px 100px;
+}
+
+.logo {
+  color: var(--logo-color);
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 170px;      
+  margin: 0;
+  min-height: 75vh;
+}
+.hero-text {
+  flex: 1;
+  max-width: 800px;
+}
+.hero-text h1 {
+  font-size: 72px;
+  white-space: nowrap;
+}
+.hero-text h1 { font-size: clamp(48px, 5vw, 88px); }
+.hero-text p  { font-size: clamp(16px, 1.4vw, 24px); }
+
+.hero-image img {
+  width: clamp(480px, 50vw, 900px); 
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.hero-fullname {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 4px 0 16px;
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+.btn-primary,
+.btn-outline {
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-bg);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+/* SECTIONS (use together) */
+.section { padding: 100px 170px; }
+.section-alt { background: var(--navbar-bg); }
+.section h2 { font-size: clamp(32px, 3.5vw, 48px); margin-bottom: 32px; }
+
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 170px;          
+  background: var(--navbar-bg);
+}
+
+.about-photo img {
+  width: clamp(240px, 24vw, 380px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.about-text { flex: 1; max-width: 1200px; }
+.about-text h2 { font-size: clamp(36px, 4vw, 56px); margin-bottom: 12px; }
+.about-intro { font-weight: 600; margin-bottom: 16px; }
+.about-text p { line-height: 1.7; margin-bottom: 14px; }
+
+/* MY PROJECTS SECTION */
+.project-grid {
+  display: flex;
+  gap: 32px;
+}
+.project-card {
+  flex: 1;
+  padding: 24px;
+  border: 1px solid var(--text-color);
+  border-radius: 20px;
+}
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.project-tags span {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0 6px 6px 0;
+  border: 1px solid var(--text-color);
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/*ICONS ชั่วคราวฮะที่template*/
+.details i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+/* PAGE LAYOUT */
+.container { display: flex; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 20px; }
+
+/* LEFT PROFILE */
+.profile { width: 30%; }
+.avatar { width: 100%; max-width: 300px; border-radius: 50%; border: 2px solid #d0d7de; }
+h1 { margin-bottom: 4px; }
+.username { color: #6e7781; font-size: 20px; }
+.bio { line-height: 1.6; }
+#followBtn { width: 100%; padding: 10px; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; cursor: pointer; }
+#followBtn:hover { background: #eaeef2; }
+.details { margin-top: 24px; }
+a { color: #0969da; }
+
+/* RIGHT CONTENT */
+.content { flex: 1; padding: 24px; border: 1px solid #d0d7de; border-radius: 8px; }
+section { margin-bottom: 32px; }
+h2 { font-size: 26px; }
+hr { border: none; border-top: 1px solid #d0d7de; }
+li { margin-bottom: 10px; }
+.project-card { padding: 16px; border: 1px solid #d0d7de; border-radius: 8px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .profile { width: 100%; }
+  .avatar { max-width: 180px; }
+}
+/* MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+  .nav-inner { padding: 16px 20px; }   /* ลดระยะขอบ navbar */
+
+  .hero,
+  .section,
+  .about { padding: 48px 20px; }       /* ลดระยะขอบซ้ายขวาทุก section */
+
+  .hero,
+  .about,
+  .project-grid {
+    flex-direction: column;            /* เรียงบนลงล่างแทนซ้ายขวา */
+    gap: 32px;
+  }
+
+  .hero-text { max-width: 100%; }
+  .hero-image img,
+  .about-photo img { width: 100%; }    /* รูปเต็มความกว้างจอ */
+}
