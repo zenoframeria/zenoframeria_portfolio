@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import FeaturedProject from "@/components/FeaturedProject";
 import Experience from "@/components/Experience";
 import SkillTags from "@/components/SkillTags";
+import SimpleFooter from "@/components/SimpleFooter";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-text">
             <h1>Hey there, I'm Frame!</h1>
-            <h2 className="hero-fullname">Thitipron Lapchaitavornkul</h2>
+            <h2 className="hero-fullname">Student Developer</h2>
             <p>Exploring web development, AI, Cybersecurity & Quantum Tech</p>
 
             <div className="hero-buttons">
@@ -50,7 +51,7 @@ export default function Home() {
         </section>
 
         <section className="section" id="projects">
-          <h2>My Projects</h2>
+          <h2>Featured Projects</h2>
 
           <div className="max-w-7xl">
             <FeaturedProject 
@@ -65,10 +66,13 @@ export default function Home() {
             <FeaturedProject 
               label="Featured project"
               title="RFC: Recycle for Credits"
-              description="A brief description of the project idea."
-              tech={["Web App", "Gamification", "next.js"]}
+              description="A gamified web application that lets students recycle waste to earn points and redeem various rewards."
+              tech={["Web App", "Gamification", "HTML/CSS/JS"]}
               reverse
             />
+          </div>
+          <div className="mt-10 flex justify-center">
+              <a href="#experience" className="btn-outline">See more work</a>
           </div>
         </section>
 
@@ -76,20 +80,21 @@ export default function Home() {
           <h2>Experience</h2>
           <div className="timeline">
             <Experience
-              period="2026"
-              title="Web Developer"
-              description="Developed and maintained responsive websites using modern technologies."
-              tags={["JavaScript", "React", "Node.js"]}
+              period=" Jan 2026"
+              title="title"
+              description="description"
+              tags={["tags", "tags", "tags"]}
             />
             <Experience
               period="2025"
-              title="AI Research Intern"
-              description="Assisted in research and development of AI models for various applications."
-              tags={["Python", "Machine Learning", "TensorFlow"]}
+              title="title"
+              description="description"
+              tags={["tags", "tags", "tags"]}
             />     
           </div>
         </section>
       </main>
+      <SimpleFooter />
     </>
   );
 }
