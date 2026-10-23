@@ -74,7 +74,7 @@ export default function Home() {
             />
           </div>
           <div className="mt-10 flex justify-center">
-              <a href="#experience" className="btn-outline">See more work</a>
+              <a href="/projects" className="btn-outline">See more projects</a>
           </div>
         </section>
 
