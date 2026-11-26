@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Press_Start_2P } from "next/font/google";
 
-// TODO 1: เปลี่ยนชื่อและคำอธิบาย (แสดงบนแท็บเบราว์เซอร์และตอนแชร์ลิงก์)
+const pixel = Press_Start_2P({ 
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-pixel" //nickname
+});
+
 export const metadata: Metadata = {
-  title: "Frame website",
-  description: "building website with nextjs and tailwindcss",
+  title: "FRAMERIA | Portfolio",
+  description: "A growing record of projects, experiments and things I'm learning in tech.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={pixel.variable}>
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>

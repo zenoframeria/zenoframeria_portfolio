@@ -58,9 +58,10 @@ body {
 
 .logo {
   color: var(--logo-color);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
+  font-family: var(--font-pixel), sans-serif;
 }
 
 .nav-links {
@@ -100,7 +101,12 @@ body {
   flex: 1;
   max-width: 800px;
 }
-.hero-text h1 { font-size: clamp(32px, 5vw, 88px); }
+.hero-text h1 { 
+  font-size: clamp(32px, 3vw, 88px);
+  font-family: var(--font-pixel), sans-serif; }
+.hero-text h2 { 
+  font-size: clamp(24px, 0.5vw, 48px); 
+  font-family: var(--font-pixel), sans-serif; }
 .hero-text p  { font-size: clamp(16px, 1.4vw, 24px); }
 
 .hero-image img {
@@ -342,10 +348,12 @@ body {
     gap: 32px;
   }
 
+  .hero { min-height: auto; }
+
   .hero-text { max-width: 100%; }
   .hero-image img,
   .about-photo img { width: 100%; }    
-  .hero-text h1 { font-size: clamp(32px, 9vw, 56px); }  
+  .hero-text h1 { font-size: clamp(32px, 7.5vw, 56px); }  
 
   .site-footer {
   flex-direction: column;
