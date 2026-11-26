@@ -11,6 +11,9 @@ export default function Navbar() {
                     <a href="/#contact">Contact</a>
                 </nav>
 
+                <button id="themeToggle" className="theme-btn" aria-label="Toggle Theme">
+                    <span className="theme-icon">🌙</span>
+                </button>
             </div>
         </header>
     );
