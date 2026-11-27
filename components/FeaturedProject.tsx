@@ -19,7 +19,7 @@ export default function FeaturedProject({
   image,
   demoUrl = "#",
   codeUrl = "#",
-  accent = "#71e3fe",
+  accent = "#ff3fb2",
   reverse = false,
 
 }: Props) {
@@ -44,14 +44,14 @@ export default function FeaturedProject({
           <div className="mt-8 flex gap-3">
             <a
               href={demoUrl}
-              className="rounded-lg px-5 py-2.5 text-base font-medium text-white transition hover:opacity-90"
+              className="rounded-lg px-5 py-2.5 text-base font-medium text-(--btn-text) transition hover:opacity-90"
               style={{ backgroundColor: accent }}
             >
               Live demo
             </a>
             <a
               href={codeUrl}
-              className="rounded-lg border border-(--border-color) bg-(--bg-color) px-5 py-2.5 text-base font-medium text-(--text-main) transition hover:bg-(--bg-hover)"
+              className="rounded-lg border border-(--border-color) bg-(--bg-color) px-5 py-2.5 text-base font-medium text-(--accent-primary) transition hover:bg-(--bg-hover) hover:text-(--btn-text)"
             >
               Source code
             </a>

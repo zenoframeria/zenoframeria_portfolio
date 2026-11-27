@@ -16,6 +16,7 @@ html {
   --text-main: #f5edff;
   --btn-text: #090713;
   --page-padding:clamp(20px, 5vw, 170px);
+  --bg-hover: #ff3fb2;
 }
 
 * {
@@ -166,9 +167,12 @@ body {
   border: 1px solid var(--accent-primary);
 }
 
-.btn-primary:hover,
+.btn-primary:hover {
+    opacity: 0.8;
+  }
 .btn-outline:hover {
-  opacity: 0.8;
+  background-color: var(--bg-hover);
+  color: var(--btn-text);
 }
 
 .social-links {
@@ -338,9 +342,9 @@ body {
   max-width: 22px;
   height: 5px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.12);
+  background: var(--border-color);
 }
-.dot.on { background: #8b5cf6; }
+.dot.on { background: var(--accent-primary); }
 
 /* MOBILE (≤ 768px) */
 @media (max-width: 768px) {
