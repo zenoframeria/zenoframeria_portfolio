@@ -1,8 +1,15 @@
 import Navbar from "@/components/Navbar";
 import FeaturedProject from "@/components/FeaturedProject";
 import Experience from "@/components/Experience";
+import Achievement from "@/components/Achievement";
 import SkillTags from "@/components/SkillTags";
 import SimpleFooter from "@/components/SimpleFooter";
+
+const achievements = [
+  { title: "Achievement 1", description: "Description of achievement 1", year: "2023" },
+  { title: "Achievement 2", description: "Description of achievement 2", year: "2024" },
+  { title: "Achievement 3", description: "Description of achievement 3", year: "2025" },
+];
 
 export default function Home() {
   return (
@@ -36,7 +43,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+        {/* ABOUT */}
         <section className="about" id="about">
           <div className="about-photo">
             <img src="/frame-img-1.jpg" alt="Frame"/>
@@ -49,11 +57,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SKILLS */}
         <section className="section" id="skills">
           <h2>Skills</h2>
           <SkillTags />
         </section>
 
+        {/* PROJECTS */}
         <section className="section" id="projects">
           <h2>Featured Projects</h2>
 
@@ -80,6 +90,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* EXPERIENCE */}
         <section className="section section-alt" id="experience">
           <h2>Experience</h2>
           <div className="timeline">
@@ -95,6 +106,24 @@ export default function Home() {
               description="description"
               tags={["tags4", "tags5", "tags6"]}
             />     
+          </div>
+        </section>
+
+        {/* ACHIEVEMENTS */}
+        <section className="section" id="achievements">
+          <h2>Achievements</h2>
+          <div className="achievements-list">
+            {achievements.map((achievement) => (
+              <Achievement
+                key={achievement.title}
+                title={achievement.title}
+                description={achievement.description}
+                year={achievement.year}
+              />
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+              <a href="/achievements" className="btn-outline">See more achievements</a>
           </div>
         </section>
       </main>

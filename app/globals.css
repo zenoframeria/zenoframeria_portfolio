@@ -306,6 +306,49 @@ body {
 
 #experience h2 { text-align: center; }
 
+/* ACHIEVEMENTS SECTION */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.achievement-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.achievement-card .achievement-text {
+  flex: 1;
+}
+.achievement-card h3 {
+  font-family: var(--font-pixel), sans-serif;
+  font-size: 17px;
+}
+
+.achievement-card p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.achievement-year {
+  font-size: 16px;
+  padding: 4px 12px;
+  display: inline-block;
+  border: 1px solid var(--text-cyan);
+  color: var(--text-cyan);
+}
+
+.achievement-icon {
+  font-size: 20px;
+  display: block;
+  color: var(--text-cyan);
+}
+
 /*FOOTER SECTION*/
 .site-footer {
   display: flex;
@@ -388,6 +431,11 @@ body {
   .timeline-item::before,
   .timeline-item:nth-child(even)::before { left: 0; right: auto; }
   .timeline-item .project-tags { justify-content: flex-start; }
+  
+  .achievement-card { 
+    flex-direction: column;
+    align-items: flex-start; 
+  }
 
   .skill-grid { grid-template-columns: repeat(2, 1fr); }
 }
