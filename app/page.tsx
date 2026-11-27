@@ -85,13 +85,13 @@ export default function Home() {
               period=" Jan 2026"
               title="title"
               description="description"
-              tags={["tags", "tags", "tags"]}
+              tags={["tags1", "tags2", "tags3"]}
             />
             <Experience
               period="2025"
               title="title"
               description="description"
-              tags={["tags", "tags", "tags"]}
+              tags={["tags4", "tags5", "tags6"]}
             />     
           </div>
         </section>
