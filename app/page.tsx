@@ -31,7 +31,9 @@ export default function Home() {
           </div>
 
           <div className="hero-image">
-            <img src="/frame-img-3.jpg" alt="Frame"/>
+            <div className="ascii-slot">
+              <pre>ASCII ART COMING SOON</pre>
+            </div>
           </div>
         </section>
 

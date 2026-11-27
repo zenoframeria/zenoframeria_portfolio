@@ -109,12 +109,21 @@ body {
   font-family: var(--font-pixel), sans-serif; }
 .hero-text p  { font-size: clamp(16px, 1.4vw, 24px); }
 
-.hero-image img {
-  width: clamp(480px, 50vw, 900px); 
+.hero-image .ascii-slot {
+  width: clamp(480px, 50vw, 900px);
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 24px;
+  border: 1px solid var(--text-color);
+  display: grid;
+  place-items: center;
 }
+
+.hero-image .ascii-slot pre {
+  font-family: monospace;
+  white-space: pre;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
 .hero-fullname {
   font-size: 24px;
   font-weight: 400;
@@ -349,9 +358,10 @@ body {
   }
 
   .hero { min-height: auto; }
+  .hero-image { width: 100%; }
 
   .hero-text { max-width: 100%; }
-  .hero-image img,
+  .hero-image .ascii-slot,
   .about-photo img { width: 100%; }    
   .hero-text h1 { font-size: clamp(32px, 7.5vw, 56px); }  
 
